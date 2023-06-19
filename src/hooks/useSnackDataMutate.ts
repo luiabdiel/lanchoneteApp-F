@@ -9,7 +9,7 @@ const postData = async (data: SnackData): AxiosPromise<any> => {
   return response;
 }
 
-export function useSnackData() {
+export function useSnackDataMutate() {
   const queryClient = useQueryClient();
 
   const mutate = useMutation({
