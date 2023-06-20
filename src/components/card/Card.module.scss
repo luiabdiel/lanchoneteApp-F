@@ -1,17 +1,35 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.card-container {
+  width: 77.25rem;
 
-  width: 15.625rem;
+  margin: 0 auto 2rem;
 
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .btn {
+    background-color: #D73035;
+    color: #fff;
 
-  img {
-    border-radius: 8px 8px 0 0;
+    font-size: 1rem;
+    font-weight: 700;
 
-    width: 15.625rem;
-    height: 12.5rem;
+    padding: 0.85rem 1.125rem;
+
+    border-radius: 12px;
+    border: none;
+    outline: none;
+
+    margin-block: 1.25rem;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ad292d;
+      transition: .2s;
+    }
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 0.75rem;
+    row-gap: 2.5rem;
   }
 }
