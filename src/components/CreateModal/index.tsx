@@ -7,15 +7,15 @@ import Close from '../../assets/close-icon.svg';
 type InputProps = {
   label: string,
   value: string | number,
+  className: string,
   updateValue(value: any): void,
-  className: string
 }
 
 type ModalProps = {
   closeModal(): void
 }
 
-const Input = ({ label, value, updateValue, className }: InputProps) => {
+const Input = ({ label, value, className, updateValue }: InputProps) => {
   return (
     <>
       <label>{label}</label>
@@ -55,9 +55,24 @@ export function CreateModal({ closeModal }: ModalProps) {
           </button>
         </div>
         <form className={S['input-container']}>
-          <Input className={S['input']} label='Título' value={title} updateValue={setTitle} />
-          <Input className={S['input']} label='Preço' value={price} updateValue={setPrice} />
-          <Input className={S['input']} label='Imagem' value={image} updateValue={setImage} />
+          <Input
+            className={S['input']}
+            label='Título'
+            value={title}
+            updateValue={setTitle}
+          />
+          <Input
+            className={S['input']}
+            label='Preço'
+            value={price}
+            updateValue={setPrice}
+          />
+          <Input
+            className={S['input']}
+            label='Imagem'
+            value={image}
+            updateValue={setImage}
+          />
           <button onClick={submit} className={S['btn-secondary']}>
             {isLoading ? 'Carregando...' : 'Postar'}
           </button>
